@@ -240,6 +240,7 @@ div.contactform {
    padding:6px;
    border:2px ridge #105a07;
   overflow-y: visible;
+  overflow-x: hidden;
   }
   input[type=button], input[type=submit], input[type=reset], input[type=file] {
     background-color: #04AA6D;
@@ -280,6 +281,9 @@ div.contactform {
      margin:10px;
      padding:10px;
      border:2px ridge #1eb80a
+   }
+   .clear {
+    clear:left;
    }
    @media only screen and (max-width: 768px){
     .container {
@@ -351,6 +355,7 @@ div.contactform {
          height: auto;
          justify-content:center;
          font-family:Verdana, Geneva, Tahoma, sans-serif;
+         font-size: 12px;
          text-align: center;
          margin:2px;
          border:#26bb13 4px ridge;
@@ -398,7 +403,7 @@ nav li {
         
     }
     .button {
-        width:70%;
+        width:50%;
         border-radius: 10%; 
         background-color: #31b95e94;
         border: 2px ridge #2a5304;
@@ -420,7 +425,7 @@ nav li {
         color:rgb(235, 231, 15);
     }
     
-    .active {
+    .button:active {
         padding: 10px 13px;
         background: #36bb887a;
         color:rgb(235, 231, 15);
