@@ -265,11 +265,12 @@ div.contactform {
      height: auto;
      justify-content:center;
      font-family: Dancing-Script, cursive;
-       text-align: center;
-     margin:10px;
+     text-align: center;
+     margin:2px;
      border:#26bb13 4px ridge;
      padding:20px;
      overflow: hidden;
+
    }
  
    div.single-page img {
@@ -344,7 +345,19 @@ div.contactform {
         background: #36bb887a;
         color:rgb(235, 231, 15);
     }
-
+    div.single-page {
+        background-color: whitesmoke;
+         width: auto;
+         height: auto;
+         justify-content:center;
+         font-family:Verdana, Geneva, Tahoma, sans-serif
+         text-align: center;
+         margin:2px;
+         border:#26bb13 4px ridge;
+         padding:20px;
+         overflow: hidden;
+    
+       }
 } 
 
 @media only screen and (min-width: 768px){
