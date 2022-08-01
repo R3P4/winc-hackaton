@@ -1,6 +1,7 @@
 .container {
+    flex-wrap: wrap;
     height: 100%;
-    width: auto;
+    width: 100%;
     display: grid;
     grid-gap: 1px;
     grid-template-columns: 1fr;
@@ -10,12 +11,12 @@
      "nav"
      "main"
      "footer";
+     overflow-x: hidden;
 } 
-
 
 header {
     grid-area: header;
-    display:inline-grid;
+    display:block;
     font-family: Dancing-Script, cursive;
     color:rgb(32, 100, 102);
     background-color: #87e79385;
@@ -55,10 +56,10 @@ main {
 body {
     margin: 0px;
     padding: 0px;
-    width: auto;
+    min-width: 100%;
     height: auto;
     background-image: linear-gradient(rgba(0, 255, 106, 0.856), yellow, green);
-   
+    
 }
     
 footer {
@@ -72,7 +73,7 @@ footer {
     text-align: justify;
     background-color: rgba(0, 128, 0, 0.959);
     color: white;
-    border:#105a07 1px solid;
+    border:#105a07 2px ridge;
 }
 
 .clear {
@@ -104,17 +105,17 @@ nav-1 li{
 nav-1 a {
     display:block;
      text-decoration: none;
-    color: #4abe27fd; 
+    color: #bae911fd; 
 }
     
 nav-1 a:hover {
      text-decoration: none;
-     color:rgb(126, 250, 11);
+     color:rgb(252, 227, 89);
 }   
   
-nav-1 a:active {
+nav-1 a:visited {
     text-decoration: none;
-    color:rgb(166, 250, 11);
+    color:rgb(250, 174, 11);
 } 
 
 nav {
@@ -123,7 +124,7 @@ nav {
     color:rgb(32, 100, 102);
     background-color: #87e79385;
     text-align: center;
-	width: auto;
+	width: 100%;
     margin-top: 5px;
     margin-left: 0px;
     margin-right: 0px;
@@ -134,9 +135,8 @@ nav {
 }
 
 .image {
-    display: block;
-    margin-left: 48%;
-    margin-right: 48%;
+    
+  
     margin-bottom:10px;
     padding:1px;
     width: 60px;
@@ -156,7 +156,7 @@ nav {
     justify-content: center;
 }
 .flex-container div {
-    width: 19rem;
+    width: 18rem;
     height:auto;
      margin: 3px;
      padding: 5px;
@@ -176,8 +176,7 @@ nav {
 }
 
 .grid-container {
-    background-color:rgb(57, 158, 57);
-    width:19rem;
+    width:18rem;
     height: auto;
     justify-content: center;
     text-align: center;
@@ -226,10 +225,10 @@ h3{
 	color:rgb(235, 231, 15);
 }
 
-.button:active {
+.button:visited {
     padding: 10px 13px;
-    background: #36bb887a;
-	color:rgb(235, 231, 15);
+    background: #44e4a78a;
+	color:rgb(235, 176, 15);
 }
 
 div.contactform {
@@ -281,6 +280,72 @@ div.contactform {
      padding:10px;
      border:2px ridge #1eb80a
    }
+   @media only screen and (max-width: 768px){
+    .container {
+        flex-wrap: wrap;
+        flex-shrink: auto;
+        flex-grow: auto;
+        height: 100%;
+        width: 100%;
+        display: block;
+        grid-gap: 1px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% auto auto auto 15%;
+        grid-template-areas: 
+        "header"
+         "nav"
+         "main"
+         "footer";
+     }
+
+    nav {
+        grid-area: nav;
+        font-family: Dancing-Script, cursive;
+        color:rgb(32, 100, 102);
+        background-color: #87e79385;
+        text-align: center;
+        width: auto;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 4px;
+        padding: 2px;
+        border:#105a07 1px solid;
+    }   
+     
+    main {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .button {
+        width:auto;
+        border-radius: 10%; 
+        background-color: #31b95e94;
+        border: 2px ridge #2a5304;
+        color: white;
+        padding: 11px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 2px 2px;
+        cursor: pointer;
+    }
+    
+    .button:hover  {
+        padding: 10px 13px;
+        background: #36bb887a;
+        color:rgb(235, 231, 15);
+    }
+    
+    .button:active {
+        padding: 10px 13px;
+        background: #36bb887a;
+        color:rgb(235, 231, 15);
+    }
+
+} 
 
 @media only screen and (min-width: 768px){
     .container {
