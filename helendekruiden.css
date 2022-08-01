@@ -430,6 +430,9 @@ nav li {
         background: #36bb887a;
         color:rgb(235, 231, 15);
     }
+    main {
+        font-family:cursive;
+    }
 } 
 
 @media only screen and (min-width: 1280px ){
