@@ -1,19 +1,23 @@
+
 .container {
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-gap: 1px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% auto auto auto 15%;
-    grid-template-areas: 
-    "header"
-     "nav"
-     "main"
-     "footer";
+        flex-wrap: wrap;
+        flex-shrink: auto;
+        flex-grow: auto;
+        height: 100%;
+        width: 100%;
+        display: block;
+        grid-gap: 1px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% auto auto auto 15%;
+        grid-template-areas: 
+        "header"
+         "nav"
+         "main"
+         "footer";
+     
      overflow-x: hidden;
      overflow-y: hidden;
-} 
+}
 
 header {
     grid-area: header;
@@ -31,7 +35,21 @@ header {
 	padding:2px;
     border:#105a07 1px solid;
 }
+nav {
+    grid-area: nav;
+    font-family: Dancing-Script, cursive;
+    color:rgb(32, 100, 102);
+    background-color: #87e79385;
+    text-align: center;
+	width: 100%;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 4px;
+	padding: 0px;
+    border:#105a07 1px solid;
 
+}
 nav ul {
     list-style: none;
     margin: 3px;
@@ -49,7 +67,7 @@ main {
     grid-area: main;
     width: auto;
     height: auto;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
     
 }
@@ -103,7 +121,7 @@ nav-1 li{
    padding:5px;
 }
   
-nav-1 a {
+nav-1 a:link {
     display:block;
      text-decoration: none;
     color: #bae911fd; 
@@ -116,28 +134,13 @@ nav-1 a:hover {
   
 nav-1 a:visited {
     text-decoration: none;
-    color:rgb(250, 174, 11);
+    color:rgb(11, 250, 55);
 } 
-
-nav {
-    grid-area: nav;
-    font-family: Dancing-Script, cursive;
-    color:rgb(32, 100, 102);
-    background-color: #87e79385;
-    text-align: center;
-	width: 100%;
-    margin-top: 5px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 4px;
-	padding: 0px;
-    border:#105a07 1px solid;
-
+nav-1 a:active {
+    color:aqua;
 }
 
 .image {
-    
-  
     margin-bottom:10px;
     padding:1px;
     width: 60px;
@@ -209,7 +212,7 @@ h3{
 	background-color: #31b95e94;
 	border: 2px ridge #2a5304;
 	color: white;
-	padding: 11px 15px;
+	padding: 10px 13px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -219,19 +222,21 @@ h3{
 	cursor: pointer;
   
 }
-
+.button:visited {
+   
+    background: #44e4a78a;
+	color:rgb(235, 176, 15);
+}
 .button:hover  {
-	padding: 10px 13px;
+	
     background: #36bb887a;
 	color:rgb(235, 231, 15);
 }
 
-.button:visited {
-    padding: 10px 13px;
-    background: #44e4a78a;
-	color:rgb(235, 176, 15);
+.button:active {
+    background-color: cadetblue;
+    color:aqua;
 }
-
 div.contactform {
     font-family: 'Times New Roman', Times, serif;
   width: auto;
@@ -286,85 +291,9 @@ div.contactform {
    .clear {
     clear:left;
    }
-   @media only screen and (max-width: 768px){
-    .container {
-        flex-wrap: wrap;
-        flex-shrink: auto;
-        flex-grow: auto;
-        height: 100%;
-        width: 100%;
-        display: block;
-        grid-gap: 1px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 15% auto auto auto 15%;
-        grid-template-areas: 
-        "header"
-         "nav"
-         "main"
-         "footer";
-     }
+ 
 
-    nav {
-        grid-area: nav;
-        font-family: Dancing-Script, cursive;
-        color:rgb(32, 100, 102);
-        background-color: #87e79385;
-        text-align: center;
-        width: auto;
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-bottom: 4px;
-        padding: 2px;
-        border:#105a07 1px solid;
-    }   
-     
-    main {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .button {
-        width:auto;
-        border-radius: 10%; 
-        background-color: #31b95e94;
-        border: 2px ridge #2a5304;
-        color: white;
-        padding: 11px 15px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        font-weight: bold;
-        margin: 2px 2px;
-        cursor: pointer;
-    }
     
-    .button:hover  {
-        padding: 10px 13px;
-        background: #36bb887a;
-        color:rgb(235, 231, 15);
-    }
-    
-    .button:active {
-        padding: 10px 13px;
-        background: #36bb887a;
-        color:rgb(235, 231, 15);
-    }
-    div.single-page {
-        background-color: whitesmoke;
-         width: auto;
-         height: auto;
-         justify-content:center;
-         font-family:Verdana, Geneva, Tahoma, sans-serif;
-         font-size: 12px;
-         text-align: center;
-         margin:2px;
-         border:#26bb13 4px ridge;
-         padding:20px;
-         overflow: hidden;
-    
-       }
-} 
 
 @media only screen and (min-width: 768px){
     .container {
@@ -380,6 +309,8 @@ div.contactform {
              "nav main"
              "nav main"
              "footer footer";
+             overflow-x: hidden;
+             overflow-y: hidden;
     }
     nav {
         grid-area: nav;
@@ -419,6 +350,10 @@ nav li {
         cursor: pointer;
       
     }
+    .button:visited {
+        background-color:#105a07;
+        color: #12f021;
+    }
     
     .button:hover  {
         padding: 10px 13px;
@@ -428,9 +363,10 @@ nav li {
     
     .button:active {
         padding: 10px 13px;
-        background: #36bb887a;
-        color:rgb(235, 231, 15);
+        background: #26eea1e3;
+        color:rgb(41, 243, 236);
     }
+    
     main {
         font-family:cursive;
     }
@@ -450,6 +386,7 @@ nav li {
                 " main main main "
                 " main main main "
                 "footer footer footer";
+
             }
 
     nav li {
